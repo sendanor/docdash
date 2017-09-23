@@ -1,14 +1,20 @@
 <?js
 var data = obj;
 var self = this;
+
 ?>
 <?js if (data.kind !== 'module') { ?>
     <?js if (data.kind === 'class' && data.classdesc) { ?>
     <h2>Constructor</h2>
     <?js } ?>
 
-    <h4 class="name" id="<?js= id ?>"><?js= data.attribs + (kind === 'class' ? 'new ' : '') +
-    name + (data.signature || '') ?></h4>
+    <h4 class="name" id="<?js= id ?>"><a class="anchor-link" href="#<?js= id ?>">#</a>
+
+        <?js= data.attribs + (kind === 'class' ? 'new ' : '') ?>
+        <?js if (data.ancestors && data.ancestors.length > 1) { ?>
+            <span class="ancestors"><?js= data.ancestors.slice(1).join('').replace('>.', '>') ?></span>
+        <?js } ?>
+        <?js= name + (data.signature || '') ?></h4>
 
     <?js if (data.summary) { ?>
     <p class="summary"><?js= summary ?></p>

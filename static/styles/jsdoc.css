@@ -25,7 +25,7 @@ img {
 
 a,
 a:active {
-  color: #606;
+  color: #0058ff;
   text-decoration: none;
 }
 
@@ -63,41 +63,51 @@ h1 {
 
 h1.page-title {
   font-size: 48px;
-  margin: 1em 30px;
+  margin: 1em 30px 1em 30px;
 }
 
 h2 {
   font-size: 24px;
-  margin: 1.5em 0 .3em;
+  margin: 2em 0 .3em;
 }
 
 h3 {
   font-size: 24px;
-  margin: 1.2em 0 .3em;
+  margin: 2em 0 .3em;
 }
 
 h4 {
   font-size: 18px;
-  margin: 1em 0 .2em;
+  margin: 2em 0 .2em;
   color: #4d4e53;
 }
 
 h4.name {
-  color: #fff;
-  background: #6d426d;
-  box-shadow: 0 .25em .5em #d3d3d3;
-  border-top: 1px solid #d3d3d3;
-  border-bottom: 1px solid #d3d3d3;
-  margin: 1.5em 0 0.5em;
-  padding: .75em 0 .75em 10px;
+  color: #535353;
+  background: #b4dbff;
+  /*box-shadow: 0 .25em .5em #d3d3d3;*/
+  /*border-top: 1px solid #d3d3d3;*/
+  /*border-bottom: 1px solid #d3d3d3;*/
+  margin: 4em 0 0.5em;
+  padding: 1em 0 1em 10px;
 }
 
 h4.name a {
-  color: #fc83ff;
+  color: #3b3ba3;
+  text-decoration: none;
 }
 
-h4.name a:hover {
-  border-bottom-color: #fc83ff;
+h4.name a.anchor-link {
+  border-bottom: 0;
+  color: transparent;
+}
+
+h4.name:hover a.anchor-link {
+  color: #3b3ba3;
+}
+
+h4.name a.anchor-link:hover {
+  color: #242461;
 }
 
 h5, .container-overview .subsection-title {
@@ -117,6 +127,24 @@ tt, code, kbd, samp {
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
   background: #f4f4f4;
   padding: 1px 5px;
+}
+
+dl {
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+dl > dt {
+  flex: 1 1 auto;
+  text-align: right;
+}
+
+dl > dd {
+  flex: 24 1 auto;
+  margin-left: 1em;
 }
 
 .class-description {
@@ -199,7 +227,7 @@ nav ul a:active {
 
 nav a:hover,
 nav a:active {
-  color: #606;
+  color: #00036c;
 }
 
 nav > ul {
@@ -207,7 +235,7 @@ nav > ul {
 }
 
 nav > ul > li > a {
-  color: #606;
+  color: #01006e;
 }
 
 nav ul ul {
@@ -237,7 +265,7 @@ nav h2 {
 nav > h2 > a {
    display: block;
    margin: 10px 0 -10px;
-   color: #606 !important;
+   color: #020066 !important;
 }
 
 footer {
@@ -271,11 +299,11 @@ footer {
 }
 
 .type-signature {
-  color: #CA79CA
+  color: #7277ca
 }
 
 .type-signature:last-child {
-  color: #eee;
+  color: #5e5e5e;
 }
 
 .name, .signature {
@@ -283,14 +311,20 @@ footer {
 }
 
 .signature {
-    color: #fc83ff;
+    color: #4040a6;
 }
 
 .details {
   margin-top: 6px;
-  border-left: 2px solid #DDD;
   line-height: 20px;
   font-size: 14px;
+}
+
+.details a {
+  color: #bebebe;
+}
+
+.details .tag-source {
 }
 
 .details dt {
@@ -306,7 +340,8 @@ footer {
 }
 
 .details ul {
-   margin: 0
+   margin: 0;
+  padding-left: 0;
 }
 
 .details ul {
@@ -453,7 +488,7 @@ footer {
 }
 
 span.param-type, .params td .param-type, .param-type dd {
-   color: #606;
+   color: #00a4ff;
   font-family: Consolas, Monaco, 'Andale Mono', monospace
 }
 
@@ -646,4 +681,9 @@ span.param-type, .params td .param-type, .param-type dd {
   display: inline-block;
   margin-left: -14px;
   margin-right: 5px;
+}
+
+/** Disable methods in nav */
+nav .methods {
+  display: none;
 }
